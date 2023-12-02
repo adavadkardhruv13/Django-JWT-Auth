@@ -2,12 +2,12 @@
 
 This Django project provides a simple authentication system using JSON Web Tokens (JWT). Users can register, obtain access tokens, refresh tokens, and access a protected dashboard.
 
-#### Access Tokens
+### Access Tokens
 Access tokens carry the necessary information to access a resource. In other words, when a user logs in, the server generates an access token, which the client application then includes in its HTTP header whenever it makes a request to any protected resources.
 
 Access tokens are short-lived. This means if an attacker steals the token, they can use it for a limited time only. When the access token expires, the server will refuse any more requests with it.
 
-#### Refresh Tokens
+### Refresh Tokens
 Refresh tokens come into play when the access token expires. Refresh tokens are longer-lived and are used to request new access tokens. This ensures a better user experience as users aren’t logged out of their sessions and forced to re-authenticate every time their access tokens expire.
 
 However, the caveat is that if a refresh token is stolen, it can be used to gain access for a much longer period of time. That’s why it’s essential to handle them securely and only expose them over HTTPS.
